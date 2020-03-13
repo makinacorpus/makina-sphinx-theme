@@ -2,6 +2,13 @@
 html
   font-size: $base-font-size
 
+hr
+  border-width: 4px
+
+.wy-nav-content,
+.wy-nav-content-wrap
+  background: $white
+
 .wy-affix
   position: fixed
   top: $gutter
@@ -70,9 +77,13 @@ html
       margin-left: -1.2em
       @extend .fa
       @extend .fa-plus-square-o
-      font-size: .8em
-      line-height: 1.6em
+      font-size: 1em;
+      line-height: 1.3em;
+      // font-size: .8em
+      // line-height: 1.6em
       color: darken($menu-link-medium, 20%)
+      &:before
+        content: ''
 
   // On state for the first level
   li.on a, li.current > a
@@ -92,9 +103,13 @@ html
       @extend .fa
       @extend .fa-minus-square-o
       display: block
-      font-size: .8em
-      line-height: 1.6em
+      font-size: 1em;
+      line-height: 1.3em;
+      // font-size: .8em
+      // line-height: 1.6em
       color: darken($menu-link-medium, 30%)
+      &:before
+        content: ''
 
   li.toctree-l1.current > a
     border-bottom: solid 1px darken($menu-vertical-background-color, 20%)
@@ -197,9 +212,8 @@ html
   color: $nav-search-color
   input[type=text]
     width: 100%
-    border-radius: 50px
     padding: 6px 12px
-    border-color: darken($link-color, 5%)
+    border: none
   img
     display: block
     margin: auto auto $gutter / 2 auto
@@ -411,8 +425,6 @@ footer
       overflow: hidden
 
 @media screen and (min-width: $nav-media-query)
-  .wy-nav-content-wrap
-    background: rgba(0,0,0,.05)
   .wy-nav-content
     margin: 0
     background: $section-background-color

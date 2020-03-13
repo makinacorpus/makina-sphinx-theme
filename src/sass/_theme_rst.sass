@@ -14,6 +14,22 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 .rst-content
+  a
+    color: $klein-makina
+    &:hover,
+    &:active,
+    &:focus
+      color: lighten($klein-makina, 20%)
+
+  p
+    text-align: justify
+    a
+      text-decoration: underline
+      color: $violet-makina
+      &:hover,
+      &:active,
+      &:focus
+        color: lighten($violet-makina, 20%)
   // Sphinx by default applies HxW style attributes to images. This fixes that oversite.
   img
     max-width: 100%
@@ -61,8 +77,11 @@
     display: block
     overflow: auto
   pre.literal-block, div[class^='highlight']
-    border: 1px solid $table-border-color
+    border: none //1px solid $table-border-color
+    border-left: 8px solid $table-border-color
     overflow-x: auto
+    background-color: $gris-violet-makina
+    color: $white
     // 1px hack otherwise border won't show. lame
     margin: 1px 0 $base-line-height 0
     div[class^='highlight']
@@ -94,9 +113,9 @@
     font-family: $code-font-family
     font-size: 12px
     line-height: 1.4
-  
+
   // Do not allow selection of code block prompts
-  div.highlight .gp 
+  div.highlight .gp
     user-select: none
     pointer-events: none
 
@@ -114,25 +133,34 @@
   // These are the various note pullouts that sphinx applies
   .note, .attention, .caution, .danger, .error, .hint, .important, .tip, .warning, .seealso, .admonition-todo, .admonition
     @extend .wy-alert
+    background: lighten($prairie-makina, 40%)
+
     // These block elements are unsuitable for having floating objects next
     // to them
     clear: both
     .last
       margin-bottom: 0
-  .admonition-title
-    @extend .wy-alert-title
-    @extend .fa
-    @extend .fa-exclamation-circle
-    &:before
-      margin-right: 4px
+    .admonition-title
+      @extend .wy-alert-title
+      @extend .fa
+      @extend .fa-exclamation-circle
+      background: $prairie-makina
+      &:before
+        margin-right: 4px
   .note, .seealso
     @extend .wy-alert.wy-alert-info
   .hint, .tip, .important
     @extend .wy-alert.wy-alert-success
   .error, .danger
     @extend .wy-alert.wy-alert-danger
+    background: lighten($capucine-makina, 30%)
+    .admonition-title
+      background: $capucine-makina
   .warning, .caution, .attention, .admonition-todo
     @extend .wy-alert.wy-alert-warning
+    background: lighten($orpiment-makina, 30%)
+    .admonition-title
+      background: $orpiment-makina
   // Some people put tables in notes. Let's give them very basic support.
   .admonition table
     border-color: rgba(0,0,0,.1)
@@ -205,7 +233,7 @@
     margin: 0 0 $base-line-height $base-line-height
     padding: $base-line-height
     background: $sidebar-background-color
-    border: solid 1px $sidebar-border-color
+    border: none
     // Sidebar content is usually less relevant, so adjust the margins and sizes.
     p, ul, dl
       font-size: 90%
@@ -269,10 +297,14 @@
   table.docutils
     @extend .wy-table
     @extend .wy-table-bordered-all
-    th
-      border-color: $table-border-color
+    border: none
+    th, thead th
+      border: none
+      border-bottom: solid 4px $table-border-color
     &:not(.field-list)
       @extend .wy-table-striped
+    td
+      border: none
     // Remove bottom margin for the last element (and it's last child)
     td .last, td .last :last-child
       margin-bottom: 0
@@ -281,7 +313,6 @@
     @extend .wy-table
     border: none
     td
-      border: none
       p
         font-size: inherit
         line-height: inherit
