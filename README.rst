@@ -1,7 +1,7 @@
 **************************
 Makina Corpus Sphinx Theme
 **************************
-(adaptd from Read the Docs Sphinx Theme)
+(adapted from Read the Docs Sphinx Theme)
 
 This Sphinx_ theme was designed to provide a great reader experience for
 documentation users on both desktop and mobile devices. This theme is used
@@ -11,6 +11,12 @@ a working demo of the theme in the `theme documentation`_
 .. _Sphinx: http://www.sphinx-doc.org
 .. _Read the Docs: http://www.readthedocs.org
 .. _theme documentation: https://sphinx-rtd-theme.readthedocs.io/en/latest/
+
+Aperçu
+============
+
+.. image:: demo/static/screen_desktop.png
+     :align: center
 
 Installation
 ============
