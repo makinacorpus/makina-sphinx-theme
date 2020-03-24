@@ -17,7 +17,6 @@ Aperçu
 
 .. image:: docs/demo/static/screen_desktop.png
      :align: center
-     :scale: 50 %
 
 Installation
 ============
