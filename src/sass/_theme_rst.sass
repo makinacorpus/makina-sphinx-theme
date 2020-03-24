@@ -138,7 +138,9 @@
   // These are the various note pullouts that sphinx applies
   .note, .attention, .caution, .danger, .error, .hint, .important, .tip, .warning, .seealso, .admonition-todo, .admonition
     @extend .wy-alert
-    background: lighten($prairie-makina, 40%)
+    border: none //1px solid $table-border-color
+    border-left: 8px solid $klein-makina
+    background: lighten($klein-makina, 70%)
 
     // These block elements are unsuitable for having floating objects next
     // to them
@@ -149,7 +151,8 @@
       @extend .wy-alert-title
       @extend .fa
       @extend .fa-exclamation-circle
-      background: $prairie-makina
+      background: lighten($klein-makina, 70%)
+      color: $klein-makina
       &:before
         margin-right: 4px
   .note, .seealso
@@ -158,14 +161,20 @@
     @extend .wy-alert.wy-alert-success
   .error, .danger
     @extend .wy-alert.wy-alert-danger
+    border: none //1px solid $table-border-color
+    border-left: 8px solid $capucine-makina
     background: lighten($capucine-makina, 30%)
     .admonition-title
-      background: $capucine-makina
+      background: lighten($capucine-makina, 30%)
+      color: $capucine-makina
   .warning, .caution, .attention, .admonition-todo
     @extend .wy-alert.wy-alert-warning
-    background: lighten($orpiment-makina, 30%)
+    border: none //1px solid $table-border-color
+    border-left: 8px solid $orpiment-makina
+    background: lighten($orpiment-makina, 40%)
     .admonition-title
-      background: $orpiment-makina
+      background: lighten($orpiment-makina, 40%)
+      color: $orpiment-makina
   // Some people put tables in notes. Let's give them very basic support.
   .admonition table
     border-color: rgba(0,0,0,.1)
