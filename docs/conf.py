@@ -12,7 +12,7 @@ from sphinx.locale import _
 from sphinx_makina_theme import __version__
 
 
-project = u'Read the Docs Sphinx Theme'
+project = u'Makina Corpus Sphinx Theme'
 slug = re.sub(r'\W+', '-', project.lower())
 version = __version__
 release = __version__
@@ -46,11 +46,9 @@ intersphinx_mapping = {
 
 html_theme = 'sphinx_makina_theme'
 html_theme_options = {
-    'logo_only': True,
     'navigation_depth': 5,
 }
 html_theme_path = ["../.."]
-html_logo = "demo/static/logo.png"
 html_show_sourcelink = True
 
 htmlhelp_basename = slug

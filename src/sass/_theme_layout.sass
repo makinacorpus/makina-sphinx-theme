@@ -7,7 +7,7 @@ hr
 
 .wy-nav-content,
 .wy-nav-content-wrap
-  background: $white
+  background: white
 
 .wy-affix
   position: fixed
@@ -308,7 +308,7 @@ hr
 
 .wy-nav-top
   display: none
-  background: $link-color
+  background: $nav-search-background-color
   color: $white
   padding: $gutter / 4 $gutter / 2
   position: relative
@@ -424,10 +424,21 @@ footer
       height: 100%
       overflow: hidden
 
+.floating-logo
+  display: none
+
 @media screen and (min-width: $nav-media-query)
   .wy-nav-content
     margin: 0
     background: $section-background-color
+
+  .floating-logo
+    display: inline
+    position: fixed
+    bottom: 20px
+    right: 20px
+    z-index: 100
+    background-color: #FFFFFF99
 
 @media print
   .rst-versions, footer, .wy-nav-side
