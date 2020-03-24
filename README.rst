@@ -15,7 +15,7 @@ a working demo of the theme in the `theme documentation`_
 Aperçu
 ============
 
-.. image:: demo/static/screen_desktop.png
+.. image:: docs/demo/static/screen_desktop.png
      :align: center
 
 Installation
