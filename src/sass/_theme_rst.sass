@@ -14,6 +14,9 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 .rst-content
+  h1
+    font-family: $custom-font-family2
+
   p, a, h1, h2, span
     &::selection
       background-color: $violet-makina
@@ -140,7 +143,7 @@
     @extend .wy-alert
     border: none //1px solid $table-border-color
     border-left: 8px solid $klein-makina
-    background: lighten($klein-makina, 70%)
+    background: transparent
 
     // These block elements are unsuitable for having floating objects next
     // to them
@@ -151,7 +154,7 @@
       @extend .wy-alert-title
       @extend .fa
       @extend .fa-exclamation-circle
-      background: lighten($klein-makina, 70%)
+      background: transparent
       color: $klein-makina
       &:before
         margin-right: 4px
@@ -163,17 +166,17 @@
     @extend .wy-alert.wy-alert-danger
     border: none //1px solid $table-border-color
     border-left: 8px solid $capucine-makina
-    background: lighten($capucine-makina, 30%)
+    background: transparent
     .admonition-title
-      background: lighten($capucine-makina, 30%)
+      background: transparent
       color: $capucine-makina
   .warning, .caution, .attention, .admonition-todo
     @extend .wy-alert.wy-alert-warning
     border: none //1px solid $table-border-color
     border-left: 8px solid $orpiment-makina
-    background: lighten($orpiment-makina, 40%)
+    background: transparent
     .admonition-title
-      background: lighten($orpiment-makina, 40%)
+      background: transparent
       color: $orpiment-makina
   // Some people put tables in notes. Let's give them very basic support.
   .admonition table
@@ -466,6 +469,10 @@
   .versionmodified
     font-style: italic
 
+  h1, h2, h3, h4, h5, h6
+    color: $klein-makina
+    a
+      color: $klein-makina
 
 // Mobile specific
 +media($mobile)

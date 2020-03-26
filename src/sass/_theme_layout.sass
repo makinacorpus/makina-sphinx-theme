@@ -290,7 +290,7 @@ hr
   top: 0
   bottom: 0
   left: 0
-  padding-bottom: 2em
+  // padding-bottom: 2em
   width: $nav-desktop-width
   overflow-x: hidden
   overflow-y: hidden
@@ -304,7 +304,7 @@ hr
   position: relative
   overflow-x: hidden
   overflow-y: scroll
-  height: 100%
+  height: calc(100% - 70px)
 
 .wy-nav-top
   display: none
@@ -366,9 +366,22 @@ footer
     color: $footer-color
 
 .rst-footer-buttons
+  margin-bottom: 15px
   &:before, &:after
     width: 100%
   +clearfix
+  .btn
+    border: solid 2px $capucine-makina
+    border-radius: 20px
+    background-color: $white !important
+    box-shadow: none;
+    color: $capucine-makina !important
+    &:hover,
+    &:active,
+    &:focus
+      color: $white !important
+      // box-shadow: 0;
+      background-color: $capucine-makina !important
 
 .rst-breadcrumbs-buttons
   margin-top: 12px
@@ -424,21 +437,20 @@ footer
       height: 100%
       overflow: hidden
 
-.floating-logo
-  display: none
+.logo-makina
+  position: relative;
+  padding: 5px;
+  width: 100%;
+  bottom: 0px;
+  background-color: $nav-search-background-color;
+  text-align: center;
+  p
+    margin: 0;
 
 @media screen and (min-width: $nav-media-query)
   .wy-nav-content
     margin: 0
     background: $section-background-color
-
-  .floating-logo
-    display: inline
-    position: fixed
-    bottom: 20px
-    right: 20px
-    z-index: 100
-    background-color: #FFFFFF99
 
 @media print
   .rst-versions, footer, .wy-nav-side
