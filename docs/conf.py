@@ -43,7 +43,7 @@ html_theme = 'sphinx_makina_theme'
 html_theme_options = {
     'navigation_depth': 5,
 }
-html_theme_path = ["../.."]
+html_theme_path = [".."]
 html_show_sourcelink = True
 
 htmlhelp_basename = slug
