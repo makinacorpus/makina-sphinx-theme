@@ -10,7 +10,7 @@ a working demo of the theme in the `theme documentation`_
 
 .. _Sphinx: http://www.sphinx-doc.org
 .. _Read the Docs: http://www.readthedocs.org
-.. _theme documentation: https://sphinx-rtd-theme.readthedocs.io/en/latest/
+.. _theme documentation: https://makina-sphinx-theme.readthedocs.io/
 
 Aperçu
 ============
@@ -21,7 +21,7 @@ Aperçu
 Installation
 ============
 
-Symlink or subtree the sphinx_makina_theme/sphinx_makina_theme repository into your documentation at
+Symlink or subtree the makinacorpus/makina-sphinx-theme repository into your documentation at
 docs/_themes/sphinx_makina_theme then add the following two settings to your Sphinx conf.py file:
 
 .. code:: python
@@ -37,4 +37,4 @@ This theme is highly customizable on both the page level and on a global level.
 To see all the possible configuration options, read the documentation on
 `configuring the theme`_.
 
-.. _configuring the theme: https://sphinx-rtd-theme.readthedocs.io/en/latest/configuring.html
+.. _configuring the theme: https://makina-sphinx-theme.readthedocs.io/en/latest/configuring.html
