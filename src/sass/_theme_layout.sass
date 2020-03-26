@@ -304,7 +304,7 @@ hr
   position: relative
   overflow-x: hidden
   overflow-y: scroll
-  height: calc(100% - 70px)
+  height: calc(100% - 65px)
 
 .wy-nav-top
   display: none
@@ -444,7 +444,10 @@ footer
   bottom: 0px;
   background-color: $nav-search-background-color;
   text-align: center;
+  &.rtd
+    bottom: -8px;
   p
+    font-size: 14px;
     margin: 0;
 
 @media screen and (min-width: $nav-media-query)
