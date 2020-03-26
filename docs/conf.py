@@ -9,8 +9,6 @@ if not 'READTHEDOCS' in os.environ:
 sys.path.append(os.path.abspath('./demo/'))
 
 from sphinx.locale import _
-from sphinx_makina_theme import __version__
-
 
 project = u'Makina Corpus Sphinx Theme'
 slug = re.sub(r'\W+', '-', project.lower())
