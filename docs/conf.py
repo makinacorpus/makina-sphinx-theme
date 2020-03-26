@@ -22,7 +22,6 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinxcontrib.httpdomain',
-    'sphinx_makina_theme',
 ]
 
 templates_path = ['_templates']
