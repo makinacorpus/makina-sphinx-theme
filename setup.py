@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
+<<<<<<< HEAD
 """`sphinx_makina_theme` lives on `Github`_.
+=======
+"""`sphinx_rtd_theme` lives on `Github`_.
+
+.. _github: https://github.com/readthedocs/sphinx_rtd_theme
+>>>>>>> rtd_theme/master
 
 """
 
@@ -16,7 +22,7 @@ class WebpackBuildCommand(setuptools.command.build_py.build_py):
     """Prefix Python build with Webpack asset build"""
 
     def run(self):
-        if not 'CI' in os.environ:
+        if not 'CI' in os.environ and not 'TOX_ENV_NAME' in os.environ:
             subprocess.run(['npm', 'install'], check=True)
             subprocess.run(['node_modules/.bin/webpack', '--config', 'webpack.prod.js'], check=True)
         setuptools.command.build_py.build_py.run(self)
@@ -78,13 +84,13 @@ class TransifexCommand(distutils.cmd.Command):
 
     def run(self):
         subprocess.run(['tx', 'push', '--source'], check=True)
-        subprocess.run(['tx', 'pull'], check=True)
+        subprocess.run(['tx', 'pull', '--mode', 'onlyreviewed', '-f', '-a'], check=True)
 
 
 setup(
     name='sphinx_makina_theme',
-    version='0.4.3.dev0',
-    url='https://gitlab.makina-corpus.net/makinacorpus/theme-sphinx-makina/',
+    version='0.5.0',
+    url='https://gitlab.makina-corpus.net/makinacorpus/theme-sphinx-makina',
     license='MIT',
     author='@sme',
     author_email='dev@makina-corpus.com',
@@ -113,7 +119,7 @@ setup(
         ]
     },
     install_requires=[
-       'sphinx'
+        'sphinx'
     ],
     tests_require=[
         'pytest',
@@ -122,6 +128,7 @@ setup(
         'dev': [
             'transifex-client',
             'sphinxcontrib-httpdomain',
+            'bump2version',
         ],
     },
     classifiers=[
