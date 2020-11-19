@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
-<<<<<<< HEAD
 """`sphinx_makina_theme` lives on `Github`_.
-=======
-"""`sphinx_rtd_theme` lives on `Github`_.
 
-.. _github: https://github.com/readthedocs/sphinx_rtd_theme
->>>>>>> rtd_theme/master
+.. _github: https://gitlab.makina-corpus.net/makinacorpus/theme-sphinx-makina
 
 """
 
